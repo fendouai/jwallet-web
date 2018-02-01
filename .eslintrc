@@ -31,13 +31,6 @@
       "error",
       "prefer-single"
     ],
-    "arrow-parens": [
-      "error",
-      "as-needed",
-      {
-        "requireForBlockBody": true
-      }
-    ],
     "comma-dangle": [
       "error",
       "always-multiline"
@@ -136,6 +129,10 @@
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "arrow-body-style": "off",
-    "global-require": "off"
+    "global-require": "off",
+
+    "arrow-parens": 0,
+    "function-paren-newline": 0,
+    "import/prefer-default-export": 0
   }
 }
