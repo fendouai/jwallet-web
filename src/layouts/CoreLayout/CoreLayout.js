@@ -14,7 +14,6 @@ const {
   BackupKeystoreModal,
   ClearKeystoreModal,
   CurrenciesModal,
-  CustomTokenModal,
   ImportKeystoreAccountModal,
   KeystoreModal,
   NewDerivationPathModal,
@@ -120,7 +119,6 @@ class CoreLayout extends Component {
         <BackupKeystoreModal />
         <ClearKeystoreModal />
         <CurrenciesModal />
-        <CustomTokenModal />
         <KeystoreModal />
         <ImportKeystoreAccountModal />
         <NewDerivationPathModal />
@@ -140,7 +138,6 @@ class CoreLayout extends Component {
       isClearKeystoreModalOpen,
       isConvertFundsModalOpen,
       isCurrenciesModalOpen,
-      isCustomTokenModalOpen,
       isImportKeystoreAccountModalOpen,
       isNewKeystoreAccountModalOpen,
       isNewKeystorePasswordModalOpen,
@@ -155,7 +152,6 @@ class CoreLayout extends Component {
       isClearKeystoreModalOpen ||
       isConvertFundsModalOpen ||
       isCurrenciesModalOpen ||
-      isCustomTokenModalOpen ||
       isImportKeystoreAccountModalOpen ||
       isNewKeystoreAccountModalOpen ||
       isNewKeystorePasswordModalOpen ||
@@ -219,7 +215,6 @@ CoreLayout.propTypes = {
   isBackupKeystoreModalOpen: PropTypes.bool.isRequired,
   isConvertFundsModalOpen: PropTypes.bool.isRequired,
   isCurrenciesModalOpen: PropTypes.bool.isRequired,
-  isCustomTokenModalOpen: PropTypes.bool.isRequired,
   isImportKeystoreAccountModalOpen: PropTypes.bool.isRequired,
   isNewDerivationPathModalOpen: PropTypes.bool.isRequired,
   isNewKeystorePasswordModalOpen: PropTypes.bool.isRequired,

@@ -85,11 +85,11 @@ function pushReceiveFunds(eventCategory: string, accountType: string) {
   })
 }
 
-function pushAddCustomToken() {
+function pushAddCustomAsset() {
   push({
     event: 'AddCustom',
     eventCategory: 'DigitalAsset',
-    eventAction: 'AddCustomToken',
+    eventAction: 'AddCustomAsset',
     eventLabel: 'Success',
   })
 }
@@ -152,7 +152,7 @@ export default {
   pushRemoveAccountSuccess,
   pushSendFundsSuccess,
   pushReceiveFunds,
-  pushAddCustomToken,
+  pushAddCustomAsset,
   pushBackupKeystore,
   pushChangePassword,
   pushClearKeystore,

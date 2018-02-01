@@ -39,7 +39,7 @@ class CurrenciesModal extends JModal {
 
   renderFooter = () => {
     return (
-      <div className='currencies-modal-footer' onClick={this.openCustomTokenModal}>
+      <div className='currencies-modal-footer'>
         <JIcon name='small-add' className='currencies-modal-footer__icon' small />
         {i18n('modals.digitalAssetManager.addCustomTokenTitle')}
       </div>
@@ -58,13 +58,6 @@ class CurrenciesModal extends JModal {
     }
   }
 
-  openCustomTokenModal = () => {
-    const { openCurrenciesModal, closeCurrenciesModal, openCustomTokenModal } = this.props
-
-    openCustomTokenModal(openCurrenciesModal)
-    closeCurrenciesModal()
-  }
-
   closeModal = () => this.props.closeCurrenciesModal()
   sortCurrencies = field => () => this.props.sortCurrencies(field)
 }
@@ -75,7 +68,6 @@ CurrenciesModal.propTypes = {
   toggleDigitalAsset: PropTypes.func.isRequired,
   searchCurrencies: PropTypes.func.isRequired,
   sortCurrencies: PropTypes.func.isRequired,
-  openCustomTokenModal: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
     address: PropTypes.string.isRequired,
     symbol: PropTypes.string.isRequired,

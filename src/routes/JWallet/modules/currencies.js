@@ -15,8 +15,6 @@ export const CURRENCIES_SET_SEARCH_OPTIONS = 'CURRENCIES_SET_SEARCH_OPTIONS'
 export const CURRENCIES_SET_SORT_OPTIONS = 'CURRENCIES_SET_SORT_OPTIONS'
 export const CURRENCIES_SET_ACTIVE_ALL = 'CURRENCIES_SET_ACTIVE_ALL'
 
-export const CURRENCIES_ADD_CUSTOM = 'CURRENCIES_ADD_CUSTOM'
-
 export function getCurrencies() {
   return {
     type: CURRENCIES_GET,
@@ -84,13 +82,6 @@ export function setSortCurrenciesOptions(sortField: string, sortDirection: strin
     type: CURRENCIES_SET_SORT_OPTIONS,
     sortField,
     sortDirection,
-  }
-}
-
-export function addCustomToken(customTokenData: TokenData) {
-  return {
-    type: CURRENCIES_ADD_CUSTOM,
-    customTokenData,
   }
 }
 
