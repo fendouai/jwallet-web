@@ -6,8 +6,8 @@ import { put, select, takeEvery } from 'redux-saga/effects'
 import gtm from 'services/gtm'
 import { InvalidFieldError } from 'utils/errors'
 
-import { SET_INVALID_FIELD, CLEAR, ADD } from '../modules/addCustomAsset'
 import { CURRENCIES_SET } from 'routes/JWallet/modules/currencies'
+import { SET_INVALID_FIELD, CLEAR, ADD } from '../modules/addCustomAsset'
 
 function selectDigitalAssetsItems(state: { currencies: { items: DigitalAssets } }): DigitalAssets {
   return state.currencies.items

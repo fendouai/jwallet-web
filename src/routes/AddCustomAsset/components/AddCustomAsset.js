@@ -15,22 +15,22 @@ const AddCustomAsset = ({
   decimals,
 }) => {
   const fields = [
-    { name: 'address', value: address, handler: setAddress },
-    { name: 'name', value: name, handler: setName },
-    { name: 'symbol', value: symbol, handler: setSymbol },
-    { name: 'decimals', value: decimals, handler: setDecimals },
+    { key: 'address', value: address, handler: setAddress },
+    { key: 'name', value: name, handler: setName },
+    { key: 'symbol', value: symbol, handler: setSymbol },
+    { key: 'decimals', value: decimals, handler: setDecimals },
   ]
 
   return (
     <div className='add-custom-asset-view'>
-      {fields.map(({ name, value, handler }) => (
+      {fields.map(({ key, value, handler }) => (
         <JTextInput
-          key={name}
+          key={key}
           onValueChange={handler}
-          name={`add-custom-asset-${name}`}
-          placeholder={i18n(`modals.addCustomToken.placeholder.${name}`)}
+          name={`add-custom-asset-${key}`}
+          placeholder={i18n(`modals.addCustomToken.placeholder.${key}`)}
           value={value}
-          errorMessage={invalidFields[name]}
+          errorMessage={invalidFields[key]}
           editable
         />
       ))}

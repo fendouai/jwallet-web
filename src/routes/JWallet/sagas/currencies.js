@@ -5,8 +5,8 @@ import { find, findIndex, findLastIndex, isEmpty } from 'lodash'
 import { all, call, put, select, takeEvery } from 'redux-saga/effects'
 
 import config from 'config'
-import { gtm, storage, web3 } from 'services'
-import { InvalidFieldError, getDefaultDigitalAssets, searchItems, sortItems } from 'utils'
+import { storage, web3 } from 'services'
+import { getDefaultDigitalAssets, searchItems, sortItems } from 'utils'
 
 import {
   selectDigitalAssets,
@@ -26,7 +26,6 @@ import {
   CURRENCIES_SORT,
   CURRENCIES_SET_SEARCH_OPTIONS,
   CURRENCIES_SET_SORT_OPTIONS,
-  CURRENCIES_ADD_CUSTOM,
 } from '../modules/currencies'
 
 import { TRANSACTIONS_GET } from '../modules/transactions'
