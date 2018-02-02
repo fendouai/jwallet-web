@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 
 import { JIcon, JPopover } from 'components/base'
 
-function KeystoreManagerPopover({
-  onClickOutside,
-  clearKeystore,
-}) {
+function KeystoreManagerPopover({ onClickOutside }) {
   return (
     <JPopover
       onClickOutside={onClickOutside}
@@ -24,7 +21,7 @@ function KeystoreManagerPopover({
               {i18n('modals.keystore.keystoreManagerAction.changePassword')}
             </span>
           </div>
-          <div className='popover__item popover__item--gray' onClick={clearKeystore}>
+          <div className='popover__item popover__item--gray'>
             <JIcon name='small-clear' className='popover__icon' small />
             <span className='popover__label'>
               {i18n('modals.keystore.keystoreManagerAction.removeAccounts')}
@@ -38,7 +35,6 @@ function KeystoreManagerPopover({
 }
 
 KeystoreManagerPopover.propTypes = {
-  clearKeystore: PropTypes.func.isRequired,
   /* optional */
   onClickOutside: PropTypes.func,
 }

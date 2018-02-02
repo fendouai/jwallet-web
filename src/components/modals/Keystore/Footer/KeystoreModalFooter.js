@@ -6,7 +6,6 @@ import KeystoreManager from './Manager'
 
 function KeystoreModalFooter({
   addNewKeystoreAccount,
-  clearKeystore,
   importNewKeystoreAccount,
 }) {
   return (
@@ -19,16 +18,13 @@ function KeystoreModalFooter({
         <JIcon name='small-import' className='keystore-modal-footer__icon' small />
         {i18n('modals.keystore.importAccountTitle')}
       </div>
-      <KeystoreManager
-        clearKeystore={clearKeystore}
-      />
+      <KeystoreManager />
     </div>
   )
 }
 
 KeystoreModalFooter.propTypes = {
   addNewKeystoreAccount: PropTypes.func.isRequired,
-  clearKeystore: PropTypes.func.isRequired,
   importNewKeystoreAccount: PropTypes.func.isRequired,
 }
 

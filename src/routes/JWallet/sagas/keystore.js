@@ -21,7 +21,6 @@ import {
   KEYSTORE_CLEAR_CURRENT_ACCOUNT_DATA,
   KEYSTORE_CREATE_ACCOUNT,
   KEYSTORE_REMOVE_ACCOUNT,
-  KEYSTORE_REMOVE_ACCOUNTS,
   KEYSTORE_SET_ACCOUNT_NAME,
   KEYSTORE_SET_DERIVATION_PATH,
   KEYSTORE_SET_ADDRESS_INDEX,
@@ -32,11 +31,6 @@ import {
   KEYSTORE_OPEN_MODAL,
   KEYSTORE_CLOSE_MODAL,
 } from '../modules/keystore'
-
-import {
-  CLEAR_KEYSTORE_CLOSE_MODAL,
-  CLEAR_KEYSTORE_SET_INVALID_FIELD,
-} from '../modules/modals/clearKeystore'
 
 import * as NEW_DERIVATION_PATH from '../modules/modals/newDerivationPath'
 
@@ -179,32 +173,6 @@ function* closeKeystoreModal() {
   if (!keystore.getAccounts().length) {
     yield put({ type: KEYSTORE_CLOSE_MODAL })
   }
-}
-
-function* onRemoveAccounts(action: { password: Password }) {
-  try {
-    keystore.removeAccounts(action.password)
-    gtm.pushClearKeystore()
-
-    yield onRemoveAccountsSuccess()
-  } catch (err) {
-    yield onRemoveAccountsError()
-  }
-}
-
-function* onRemoveAccountsSuccess() {
-  yield setAccounts()
-  yield clearCurrentAccount()
-
-  yield put({ type: CLEAR_KEYSTORE_CLOSE_MODAL })
-}
-
-function* onRemoveAccountsError() {
-  yield put({
-    type: CLEAR_KEYSTORE_SET_INVALID_FIELD,
-    fieldName: 'password',
-    message: i18n('modals.general.error.password.invalid'),
-  })
 }
 
 function* setAccountName(action) {
@@ -406,10 +374,6 @@ export function* watchSetCurrentAccount(): Saga<void> {
 
 export function* watchRemoveAccount(): Saga<void> {
   yield takeEvery(KEYSTORE_REMOVE_ACCOUNT, onRemoveAccount)
-}
-
-export function* watchRemoveAccounts(): Saga<void> {
-  yield takeEvery(KEYSTORE_REMOVE_ACCOUNTS, onRemoveAccounts)
 }
 
 export function* watchSetAccountName(): Saga<void> {

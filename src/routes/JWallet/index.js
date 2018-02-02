@@ -11,7 +11,6 @@ export default store => ({
       const transactions = require('./modules/transactions').default
 
       const alphaWarningModal = require('./modules/modals/alphaWarning').default
-      const clearKeystoreModal = require('./modules/modals/clearKeystore').default
       const convertFundsModal = require('./modules/modals/convertFunds').default
       const importKeystoreAccountModal = require('./modules/modals/importKeystoreAccount').default
       const newDerivationPathModal = require('./modules/modals/newDerivationPath').default
@@ -25,7 +24,6 @@ export default store => ({
       injectReducer(store, { key: 'transactions', reducer: transactions })
 
       injectReducer(store, { key: 'alphaWarningModal', reducer: alphaWarningModal })
-      injectReducer(store, { key: 'clearKeystoreModal', reducer: clearKeystoreModal })
       injectReducer(store, { key: 'convertFundsModal', reducer: convertFundsModal })
       injectReducer(store, { key: 'importKeystoreAccountModal', reducer: importKeystoreAccountModal }) // eslint-disable-line max-len
       injectReducer(store, { key: 'newDerivationPathModal', reducer: newDerivationPathModal })

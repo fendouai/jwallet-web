@@ -11,7 +11,6 @@ const { JFooter, JLoader } = base
 
 const {
   AlphaWarningModal,
-  ClearKeystoreModal,
   CurrenciesModal,
   ImportKeystoreAccountModal,
   KeystoreModal,
@@ -114,7 +113,6 @@ class CoreLayout extends Component {
     return (
       <div className={`modals modals--${i18n('language')}`}>
         <AlphaWarningModal />
-        <ClearKeystoreModal />
         <CurrenciesModal />
         <KeystoreModal />
         <ImportKeystoreAccountModal />
@@ -130,7 +128,6 @@ class CoreLayout extends Component {
     const {
       keystore,
       isAlphaWarningModalOpen,
-      isClearKeystoreModalOpen,
       isConvertFundsModalOpen,
       isCurrenciesModalOpen,
       isImportKeystoreAccountModalOpen,
@@ -142,7 +139,6 @@ class CoreLayout extends Component {
     return (
       keystore.isOpen ||
       isAlphaWarningModalOpen ||
-      isClearKeystoreModalOpen ||
       isConvertFundsModalOpen ||
       isCurrenciesModalOpen ||
       isImportKeystoreAccountModalOpen ||
@@ -203,7 +199,6 @@ CoreLayout.propTypes = {
   }).isRequired,
   isAlphaWarningModalOpen: PropTypes.bool.isRequired,
   isNewKeystoreAccountModalOpen: PropTypes.bool.isRequired,
-  isClearKeystoreModalOpen: PropTypes.bool.isRequired,
   isConvertFundsModalOpen: PropTypes.bool.isRequired,
   isCurrenciesModalOpen: PropTypes.bool.isRequired,
   isImportKeystoreAccountModalOpen: PropTypes.bool.isRequired,

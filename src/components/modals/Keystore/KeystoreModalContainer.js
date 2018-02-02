@@ -14,7 +14,6 @@ import {
   setNewAccountName,
 } from 'routes/JWallet/modules/keystore'
 
-import { openClearKeystoreModal } from 'routes/JWallet/modules/modals/clearKeystore'
 import { openImportKeystoreAccountModal } from 'routes/JWallet/modules/modals/importKeystoreAccount'
 import { openNewDerivationPathModal } from 'routes/JWallet/modules/modals/newDerivationPath'
 import { openNewKeystoreAccountModal } from 'routes/JWallet/modules/modals/newKeystoreAccount'
@@ -38,7 +37,6 @@ const mapDispatchToProps = {
   closeKeystoreModal,
   setEditAccountName,
   setNewAccountName,
-  openClearKeystoreModal,
   openImportKeystoreAccountModal,
   openNewDerivationPathModal,
   openNewKeystoreAccountModal,
