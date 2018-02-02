@@ -230,6 +230,7 @@ module.exports = {
       placeholder: {
         password: 'Current password',
         newPassword: 'New password',
+        confirmPassword: 'Confirm password',
       },
       error: {
         password: {
