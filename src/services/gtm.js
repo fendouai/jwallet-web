@@ -115,7 +115,7 @@ function pushChangePassword() {
   })
 }
 
-function pushClearKeystore() {
+function pushClearKeys() {
   push({
     event: 'DeleteKeystore',
     eventCategory: 'ProfileSettings',
@@ -155,7 +155,7 @@ export default {
   pushAddCustomAsset,
   pushBackupKeys,
   pushChangePassword,
-  pushClearKeystore,
+  pushClearKeys,
   pushAddCustomNetwork,
   pushChangeLanguage,
 }
