@@ -18,7 +18,6 @@ function KeystoreManager(props) {
 }
 
 KeystoreManager.propTypes = {
-  backupKeystore: PropTypes.func.isRequired,
   clearKeystore: PropTypes.func.isRequired,
   setKeystorePassword: PropTypes.func.isRequired,
 }

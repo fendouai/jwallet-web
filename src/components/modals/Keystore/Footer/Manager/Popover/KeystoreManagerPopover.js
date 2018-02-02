@@ -5,7 +5,6 @@ import { JIcon, JPopover } from 'components/base'
 
 function KeystoreManagerPopover({
   onClickOutside,
-  backupKeystore,
   clearKeystore,
   setKeystorePassword,
 }) {
@@ -14,7 +13,7 @@ function KeystoreManagerPopover({
       onClickOutside={onClickOutside}
       body={(
         <div className='keystore-manager-popover'>
-          <div className='popover__item' onClick={backupKeystore}>
+          <div className='popover__item'>
             <JIcon name='small-backup' className='popover__icon' small />
             <span className='popover__label'>
               {i18n('modals.keystore.keystoreManagerAction.backupKeystore')}
@@ -40,7 +39,6 @@ function KeystoreManagerPopover({
 }
 
 KeystoreManagerPopover.propTypes = {
-  backupKeystore: PropTypes.func.isRequired,
   clearKeystore: PropTypes.func.isRequired,
   setKeystorePassword: PropTypes.func.isRequired,
   /* optional */

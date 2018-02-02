@@ -1,5 +1,4 @@
 export AlphaWarningModal from './AlphaWarning'
-export BackupKeystoreModal from './BackupKeystore'
 export ClearKeystoreModal from './ClearKeystore'
 export ConvertFundsModal from './ConvertFunds'
 export CurrenciesModal from './Currencies'

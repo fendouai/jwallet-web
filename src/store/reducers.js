@@ -7,7 +7,6 @@ import networks from 'routes/JWallet/modules/networks'
 import transactions from 'routes/JWallet/modules/transactions'
 
 import alphaWarningModal from 'routes/JWallet/modules/modals/alphaWarning'
-import backupKeystoreModal from 'routes/JWallet/modules/modals/backupKeystore'
 import clearKeystoreModal from 'routes/JWallet/modules/modals/clearKeystore'
 import convertFundsModal from 'routes/JWallet/modules/modals/convertFunds'
 import importKeystoreAccountModal from 'routes/JWallet/modules/modals/importKeystoreAccount'
@@ -24,7 +23,6 @@ export const makeRootReducer = (asyncReducers) => {
     networks,
     transactions,
     alphaWarningModal,
-    backupKeystoreModal,
     clearKeystoreModal,
     convertFundsModal,
     importKeystoreAccountModal,

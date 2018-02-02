@@ -51,7 +51,6 @@ class KeystoreModal extends JModal {
     return (
       <KeystoreModalFooter
         addNewKeystoreAccount={this.openNewKeystoreAccountModal}
-        backupKeystore={this.openModal('BackupKeystore')}
         clearKeystore={this.openModal('ClearKeystore')}
         importNewKeystoreAccount={this.openImportKeystoreAccountModal}
         setKeystorePassword={this.openModal('NewKeystorePassword')}
@@ -144,7 +143,6 @@ KeystoreModal.propTypes = {
   closeKeystoreModal: PropTypes.func.isRequired,
   setEditAccountName: PropTypes.func.isRequired,
   setNewAccountName: PropTypes.func.isRequired,
-  openBackupKeystoreModal: PropTypes.func.isRequired,
   openClearKeystoreModal: PropTypes.func.isRequired,
   openImportKeystoreAccountModal: PropTypes.func.isRequired,
   openNewDerivationPathModal: PropTypes.func.isRequired,

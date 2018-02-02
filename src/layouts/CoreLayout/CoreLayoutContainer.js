@@ -27,7 +27,6 @@ const mapStateToProps = state => ({
   keystore: state.keystore,
   networks: state.networks,
   isAlphaWarningModalOpen: state.alphaWarningModal.isOpen,
-  isBackupKeystoreModalOpen: state.backupKeystoreModal.isOpen,
   isClearKeystoreModalOpen: state.clearKeystoreModal.isOpen,
   isConvertFundsModalOpen: state.convertFundsModal.isOpen,
   isCurrenciesModalOpen: state.currencies.isOpen,

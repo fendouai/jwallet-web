@@ -6,7 +6,6 @@ import KeystoreManager from './Manager'
 
 function KeystoreModalFooter({
   addNewKeystoreAccount,
-  backupKeystore,
   clearKeystore,
   importNewKeystoreAccount,
   setKeystorePassword,
@@ -22,7 +21,6 @@ function KeystoreModalFooter({
         {i18n('modals.keystore.importAccountTitle')}
       </div>
       <KeystoreManager
-        backupKeystore={backupKeystore}
         clearKeystore={clearKeystore}
         setKeystorePassword={setKeystorePassword}
       />
@@ -32,7 +30,6 @@ function KeystoreModalFooter({
 
 KeystoreModalFooter.propTypes = {
   addNewKeystoreAccount: PropTypes.func.isRequired,
-  backupKeystore: PropTypes.func.isRequired,
   clearKeystore: PropTypes.func.isRequired,
   importNewKeystoreAccount: PropTypes.func.isRequired,
   setKeystorePassword: PropTypes.func.isRequired,
