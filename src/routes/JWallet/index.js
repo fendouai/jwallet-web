@@ -16,7 +16,6 @@ export default store => ({
       const importKeystoreAccountModal = require('./modules/modals/importKeystoreAccount').default
       const newDerivationPathModal = require('./modules/modals/newDerivationPath').default
       const newKeystoreAccountModal = require('./modules/modals/newKeystoreAccount').default
-      const newKeystorePasswordModal = require('./modules/modals/newKeystorePassword').default
       const receiveFundsModal = require('./modules/modals/receiveFunds').default
       const sendFundsModal = require('./modules/modals/sendFunds').default
 
@@ -31,7 +30,6 @@ export default store => ({
       injectReducer(store, { key: 'importKeystoreAccountModal', reducer: importKeystoreAccountModal }) // eslint-disable-line max-len
       injectReducer(store, { key: 'newDerivationPathModal', reducer: newDerivationPathModal })
       injectReducer(store, { key: 'newKeystoreAccountModal', reducer: newKeystoreAccountModal })
-      injectReducer(store, { key: 'newKeystorePasswordModal', reducer: newKeystorePasswordModal })
       injectReducer(store, { key: 'receiveFundsModal', reducer: receiveFundsModal })
       injectReducer(store, { key: 'sendFundsModal', reducer: sendFundsModal })
 

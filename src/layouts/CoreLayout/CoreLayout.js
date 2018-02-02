@@ -17,7 +17,6 @@ const {
   KeystoreModal,
   NewDerivationPathModal,
   NewKeystoreAccountModal,
-  NewKeystorePasswordModal,
   ReceiveFundsModal,
   SendFundsModal,
 } = modals
@@ -121,7 +120,6 @@ class CoreLayout extends Component {
         <ImportKeystoreAccountModal />
         <NewDerivationPathModal />
         <NewKeystoreAccountModal />
-        <NewKeystorePasswordModal />
         <ReceiveFundsModal />
         <SendFundsModal />
       </div>
@@ -137,7 +135,6 @@ class CoreLayout extends Component {
       isCurrenciesModalOpen,
       isImportKeystoreAccountModalOpen,
       isNewKeystoreAccountModalOpen,
-      isNewKeystorePasswordModalOpen,
       isReceiveFundsModalOpen,
       isSendFundsModalOpen,
     } = this.props
@@ -150,7 +147,6 @@ class CoreLayout extends Component {
       isCurrenciesModalOpen ||
       isImportKeystoreAccountModalOpen ||
       isNewKeystoreAccountModalOpen ||
-      isNewKeystorePasswordModalOpen ||
       isReceiveFundsModalOpen ||
       isSendFundsModalOpen
     )
@@ -212,7 +208,6 @@ CoreLayout.propTypes = {
   isCurrenciesModalOpen: PropTypes.bool.isRequired,
   isImportKeystoreAccountModalOpen: PropTypes.bool.isRequired,
   isNewDerivationPathModalOpen: PropTypes.bool.isRequired,
-  isNewKeystorePasswordModalOpen: PropTypes.bool.isRequired,
   isReceiveFundsModalOpen: PropTypes.bool.isRequired,
   isSendFundsModalOpen: PropTypes.bool.isRequired,
   children: PropTypes.element,

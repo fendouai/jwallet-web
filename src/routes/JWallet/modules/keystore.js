@@ -17,7 +17,6 @@ export const KEYSTORE_SET_DERIVATION_PATH = 'KEYSTORE_SET_DERIVATION_PATH'
 export const KEYSTORE_SET_ADDRESS_INDEX = 'KEYSTORE_SET_ADDRESS_INDEX'
 export const KEYSTORE_GET_ADDRESSES_FROM_MNEMONIC = 'KEYSTORE_GET_ADDRESSES_FROM_MNEMONIC'
 export const KEYSTORE_SET_ADDRESSES_FROM_MNEMONIC = 'KEYSTORE_SET_ADDRESSES_FROM_MNEMONIC'
-export const KEYSTORE_SET_PASSWORD = 'KEYSTORE_SET_PASSWORD'
 export const KEYSTORE_SORT_ACCOUNTS = 'KEYSTORE_SORT_ACCOUNTS'
 export const KEYSTORE_SET_SORT_ACCOUNTS_OPTIONS = 'KEYSTORE_SET_SORT_ACCOUNTS_OPTIONS'
 export const KEYSTORE_BACKUP = 'KEYSTORE_BACKUP'
@@ -107,21 +106,6 @@ export function getKeystoreAddressesFromMnemonic(
   }
 }
 
-export function setKeystorePassword(
-  password: string = '',
-  newPassword: string = '',
-  onSuccess: any = null,
-  onError: any = null
-) {
-  return {
-    type: KEYSTORE_SET_PASSWORD,
-    password,
-    newPassword,
-    onSuccess,
-    onError,
-  }
-}
-
 export function sortAccounts(sortField: string = 'name') {
   return {
     type: KEYSTORE_SORT_ACCOUNTS,
@@ -134,13 +118,6 @@ export function setSortAccountsOptions(sortField: string = 'name', sortDirection
     type: KEYSTORE_SET_SORT_ACCOUNTS_OPTIONS,
     sortField,
     sortDirection,
-  }
-}
-
-export function backupKeystore(password: string = '') {
-  return {
-    type: KEYSTORE_BACKUP,
-    password,
   }
 }
 

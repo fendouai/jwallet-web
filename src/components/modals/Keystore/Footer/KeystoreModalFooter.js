@@ -8,7 +8,6 @@ function KeystoreModalFooter({
   addNewKeystoreAccount,
   clearKeystore,
   importNewKeystoreAccount,
-  setKeystorePassword,
 }) {
   return (
     <div className='keystore-modal-footer clear'>
@@ -22,7 +21,6 @@ function KeystoreModalFooter({
       </div>
       <KeystoreManager
         clearKeystore={clearKeystore}
-        setKeystorePassword={setKeystorePassword}
       />
     </div>
   )
@@ -32,7 +30,6 @@ KeystoreModalFooter.propTypes = {
   addNewKeystoreAccount: PropTypes.func.isRequired,
   clearKeystore: PropTypes.func.isRequired,
   importNewKeystoreAccount: PropTypes.func.isRequired,
-  setKeystorePassword: PropTypes.func.isRequired,
 }
 
 export default KeystoreModalFooter

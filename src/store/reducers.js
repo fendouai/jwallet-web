@@ -12,7 +12,6 @@ import convertFundsModal from 'routes/JWallet/modules/modals/convertFunds'
 import importKeystoreAccountModal from 'routes/JWallet/modules/modals/importKeystoreAccount'
 import newDerivationPathModal from 'routes/JWallet/modules/modals/newDerivationPath'
 import newKeystoreAccountModal from 'routes/JWallet/modules/modals/newKeystoreAccount'
-import newKeystorePasswordModal from 'routes/JWallet/modules/modals/newKeystorePassword'
 import receiveFundsModal from 'routes/JWallet/modules/modals/receiveFunds'
 import sendFundsModal from 'routes/JWallet/modules/modals/sendFunds'
 
@@ -28,7 +27,6 @@ export const makeRootReducer = (asyncReducers) => {
     importKeystoreAccountModal,
     newDerivationPathModal,
     newKeystoreAccountModal,
-    newKeystorePasswordModal,
     receiveFundsModal,
     sendFundsModal,
     router,

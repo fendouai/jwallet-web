@@ -27,7 +27,6 @@ import {
   KEYSTORE_SET_ADDRESS_INDEX,
   KEYSTORE_GET_ADDRESSES_FROM_MNEMONIC,
   KEYSTORE_SET_ADDRESSES_FROM_MNEMONIC,
-  KEYSTORE_SET_PASSWORD,
   KEYSTORE_SORT_ACCOUNTS,
   KEYSTORE_SET_SORT_ACCOUNTS_OPTIONS,
   KEYSTORE_OPEN_MODAL,
@@ -375,18 +374,6 @@ function setAddressesToStorage(newItems: Addresses) {
   storage.setKeystoreAddressesFromMnemonic(JSON.stringify(newAddresses))
 }
 
-function onSetPassword({ password, newPassword, onSuccess, onError }) {
-  try {
-    keystore.setPassword(password, newPassword)
-    gtm.pushChangePassword()
-    setKeystoreToStorage()
-
-    return onSuccess ? onSuccess() : null
-  } catch (err) {
-    return onError ? onError(err) : null
-  }
-}
-
 function* sortAccounts(action: { sortField: string }) {
   const keystoreData = yield select(selectKeystoreData)
 
@@ -443,10 +430,6 @@ export function* watchSetAddressIndex(): Saga<void> {
 
 export function* watchGetAddressesFromMnemonic(): Saga<void> {
   yield takeEvery(KEYSTORE_GET_ADDRESSES_FROM_MNEMONIC, getAddressesFromMnemonic)
-}
-
-export function* watchSetPassword(): Saga<void> {
-  yield takeEvery(KEYSTORE_SET_PASSWORD, onSetPassword)
 }
 
 export function* watchSortAccounts(): Saga<void> {

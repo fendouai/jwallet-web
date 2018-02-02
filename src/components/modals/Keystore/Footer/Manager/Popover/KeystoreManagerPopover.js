@@ -6,7 +6,6 @@ import { JIcon, JPopover } from 'components/base'
 function KeystoreManagerPopover({
   onClickOutside,
   clearKeystore,
-  setKeystorePassword,
 }) {
   return (
     <JPopover
@@ -19,7 +18,7 @@ function KeystoreManagerPopover({
               {i18n('modals.keystore.keystoreManagerAction.backupKeystore')}
             </span>
           </div>
-          <div className='popover__item' onClick={setKeystorePassword}>
+          <div className='popover__item'>
             <JIcon name='gear' className='popover__icon' small />
             <span className='popover__label'>
               {i18n('modals.keystore.keystoreManagerAction.changePassword')}
@@ -40,7 +39,6 @@ function KeystoreManagerPopover({
 
 KeystoreManagerPopover.propTypes = {
   clearKeystore: PropTypes.func.isRequired,
-  setKeystorePassword: PropTypes.func.isRequired,
   /* optional */
   onClickOutside: PropTypes.func,
 }

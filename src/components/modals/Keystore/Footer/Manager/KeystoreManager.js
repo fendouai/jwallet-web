@@ -19,7 +19,6 @@ function KeystoreManager(props) {
 
 KeystoreManager.propTypes = {
   clearKeystore: PropTypes.func.isRequired,
-  setKeystorePassword: PropTypes.func.isRequired,
 }
 
 export default KeystoreManager
