@@ -97,7 +97,7 @@ function pushAddCustomAsset() {
 /**
  * eventLabel value is one of Open/Success
  */
-function pushBackupKeystore(eventLabel: string) {
+function pushBackupKeys(eventLabel: string) {
   push({
     event: 'BackupKeystore',
     eventCategory: 'ProfileSettings',
@@ -153,7 +153,7 @@ export default {
   pushSendFundsSuccess,
   pushReceiveFunds,
   pushAddCustomAsset,
-  pushBackupKeystore,
+  pushBackupKeys,
   pushChangePassword,
   pushClearKeystore,
   pushAddCustomNetwork,
